@@ -11,11 +11,11 @@ matrix:
     # Allow the nightly installs to fail
     - env: 'NVM_NODEJS_ORG_MIRROR=https://nodejs.org/download/nightly'
 install:
-  - npm i npminstall && npminstall
+  - npm i
 script:
   - npm run ci
 after_script:
-  - npminstall codecov && codecov
+  - npm i codecov && codecov
   - scripts/doc_travis.sh
 env:
   global:
